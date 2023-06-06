@@ -1,0 +1,203 @@
+{
+  "id": "e8f910aa-eba3-4cd0-aed9-728f9daaf1ae",
+  "version": "2.0",
+  "name": "eyesTest",
+  "url": "http://the-internet.herokuapp.com",
+  "tests": [{
+    "id": "8e990d44-2d56-4121-8f6f-357f0c8425fa",
+    "name": "FormAuthentication",
+    "commands": [{
+      "id": "570a9a4d-b649-466f-a592-ea16054d0842",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e43f8ce5-0678-415f-afaa-0c810c4c31b2",
+      "comment": "",
+      "command": "eyesSetViewportSize",
+      "target": "1260x796",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6678fad4-1d9d-49bd-b101-b2dbfb2fb9ce",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Form Authentication",
+      "targets": [
+        ["linkText=Form Authentication", "linkText"],
+        ["css=li:nth-child(21) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Form Authentication')]", "xpath:link"],
+        ["xpath=//div[@id='content']/ul/li[21]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//li[21]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Form Authentication')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d55a063-fa95-4dcc-9a94-808bea48b3ea",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "702eccd2-7ec0-4493-a48f-8d4a45a9eeff",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${username}"
+    }, {
+      "id": "8a1f2ac4-6fb6-4fbe-8908-91e0f14dff04",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd15ac86-518c-4174-80e4-9edfec88dcfb",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [],
+      "value": "${password}"
+    }, {
+      "id": "7f306b4e-fc6e-4171-bfa0-6ec307266117",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa",
+      "targets": [
+        ["css=.fa", "css:finder"],
+        ["xpath=//form[@id='login']/button/i", "xpath:idRelative"],
+        ["xpath=//i", "xpath:position"],
+        ["xpath=//i[contains(.,' Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1b172c7-492b-4c55-a6e6-e576d60e174d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.button", "css:finder"],
+        ["xpath=//div[@id='content']/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/logout')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0c4101ad-5525-45f4-900d-4381489b028e",
+    "name": "Valid Creds",
+    "commands": [{
+      "id": "5a94c244-3312-43a3-887e-ba378cc55036",
+      "comment": "",
+      "command": "store",
+      "target": "tomsmith",
+      "targets": [],
+      "value": "username"
+    }, {
+      "id": "b34d6cfd-fc2d-49bb-84a0-c1fe08fb51c3",
+      "comment": "",
+      "command": "store",
+      "target": "SuperSecretPassword!",
+      "targets": [],
+      "value": "password"
+    }, {
+      "id": "0a883fe1-1b16-4b97-8011-91750b925687",
+      "comment": "",
+      "command": "run",
+      "target": "FormAuthentication",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc1bb160-ba97-4708-8846-1cb78237e138",
+      "comment": "",
+      "command": "eyesCheckWindow",
+      "target": "Logged In",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54f0d883-0362-4ebc-9898-cbca544ac5ac",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=flash",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//div[@id='content']/div/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Login Page')]", "xpath:innerText"]
+      ],
+      "value": "You logged out of the secure area! "
+    }]
+  }],
+  "suites": [{
+    "id": "0edc20c2-ca29-4e1c-8149-e87f2a34ff08",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8e990d44-2d56-4121-8f6f-357f0c8425fa"]
+  }],
+  "urls": ["http://the-internet.herokuapp.com/"],
+  "plugins": [{
+    "id": "fbnkflkahhlmhdgkddaafgnnokifobik",
+    "name": "Applitools",
+    "version": "1.0.0"
+  }],
+  "snapshot": {
+    "globalConfig": {
+      "snapshot": "const { Eyes, Target } = require('@applitools/eyes-selenium');global.Target = Target;const { ConsoleLogHandler, BatchInfo, AccessibilityLevel, AccessibilityGuidelinesVersion } = require('@applitools/eyes-sdk-core');let apiKey = process.env.APPLITOOLS_API_KEY, serverUrl = process.env.APPLITOOLS_SERVER_URL, appName = \"eyesTest\", batchId = configuration.runId, batchName;"
+    },
+    "suites": [{
+      "name": "Default Suite",
+      "persistSession": false,
+      "snapshot": {
+        "hook": "beforeAll(async () => {batchName = \"Default Suite\";});beforeEach(async () => {global.eyes = Eyes.fromBrowserInfo(serverUrl, configuration.params.eyesDisabled, configuration.params.eyesRendering ? { browser: configuration.params.eyesRendering } : undefined);\neyes.setApiKey(apiKey);eyes.getBaseAgentId = () => (\"eyes.seleniumide.runner.\" + (eyes._isVisualGrid ? \"visualgrid\" : \"local\") + \"/1.14.0\");\neyes.setAgentId(\"eyes.seleniumide.runner.\" + (eyes._isVisualGrid ? \"visualgrid\" : \"local\") + \"/1.14.0\");\neyes.setBatch(new BatchInfo(batchName, undefined, batchId));\nif(!eyes._isVisualGrid) {\n\teyes.setHideScrollbars(true);\n\teyes.setStitchMode(\"CSS\");\n}\neyes.setSendDom(configuration.params.eyesDomUploadEnabled === undefined ? true : configuration.params.eyesDomUploadEnabled);\nif (configuration.params.eyesLogsEnabled) {\n\teyes.setLogHandler(new ConsoleLogHandler(true));\n}\nif (configuration.params.eyesAccessibilityLevel) {\n\tconst _config = eyes.getConfiguration();\n\t_config.setAccessibilityValidation(\n\t\t{\n\t\t\tlevel: AccessibilityLevel[configuration.params.eyesAccessibilityLevel],\n\t\t\tguidelinesVersion: AccessibilityGuidelinesVersion.WCAG_2_0,\n\t\t}\n\t)\n\teyes.setConfiguration(_config);\n}});afterEach(async () => {if (eyes._isOpen) {eyes.getEyesRunner ? await eyes.getEyesRunner().getAllResults() : await eyes.close();}});"
+      }
+    }],
+    "tests": [{
+      "id": "8e990d44-2d56-4121-8f6f-357f0c8425fa",
+      "snapshot": {
+        "commands": {
+          "e43f8ce5-0678-415f-afaa-0c810c4c31b2": "await eyes.setViewportSize({width: 1260, height: 796});"
+        },
+        "setupHooks": ["const _driver = driver;driver = await eyes.open(driver, appName, \"FormAuthentication\");global.preRenderHook = \"\";"],
+        "teardownHooks": ["driver = _driver;"]
+      }
+    }, {
+      "id": "0c4101ad-5525-45f4-900d-4381489b028e",
+      "snapshot": {
+        "commands": {
+          "cc1bb160-ba97-4708-8846-1cb78237e138": "if (!opts.isNested) {await eyes.check(\"Logged In\" || (new URL(await driver.getCurrentUrl())).pathname, Target.window().webHook(preRenderHook).fully(true));}"
+        },
+        "setupHooks": ["const _driver = driver;driver = await eyes.open(driver, appName, \"Valid Creds\");global.preRenderHook = \"\";"],
+        "teardownHooks": ["driver = _driver;"]
+      }
+    }]
+  },
+  "dependencies": {
+    "@applitools/eyes-selenium": "4.44.0"
+  },
+  "jest": {
+    "extraGlobals": ["Math"]
+  }
+}

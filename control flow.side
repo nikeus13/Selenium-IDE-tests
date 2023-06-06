@@ -1,0 +1,330 @@
+{
+  "id": "3e210a43-dbc5-4501-9ee2-9b6ffd35d8d1",
+  "version": "2.0",
+  "name": "control flow",
+  "url": "http://the-internet.herokuapp.com",
+  "tests": [{
+    "id": "6bc6bf01-621f-4607-bd01-3839b3672949",
+    "name": "conditions",
+    "commands": [{
+      "id": "4eb1dde2-995d-4d16-83f3-c6f4d80668cf",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"c\"",
+      "targets": [],
+      "value": "myVar"
+    }, {
+      "id": "19dc2973-0f40-4a95-8485-92fa426710c0",
+      "comment": "",
+      "command": "if",
+      "target": "${myVar} === \"a\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "734b4f62-ee8c-4200-8ea0-c80f40b43692",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"a\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "c0497994-dad2-4b54-bada-6bc646bd29cf",
+      "comment": "",
+      "command": "elseIf",
+      "target": "${myVar} === \"b\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9cd0f04f-9a9c-4e07-a6b9-e1f7afbe606e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"b\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "ec02a9a8-7e15-40f4-addf-db090b780a5f",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a2c121c-a5b1-425f-ba97-87ccc850fea1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"c\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "2487e263-bdc7-442c-ae78-dd7bbd331d95",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e53e0d1d-0bc8-4cb8-bcc4-a0e0a1f3afa0",
+      "comment": "",
+      "command": "assert",
+      "target": "output",
+      "targets": [],
+      "value": "c"
+    }]
+  }, {
+    "id": "b6168b5c-e282-415b-aca3-e759eb23737d",
+    "name": "loops",
+    "commands": [{
+      "id": "186e4609-c549-4912-be22-406a21ea32b0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "check"
+    }, {
+      "id": "9bc16787-712a-4721-a1c1-a2f6ea175a12",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2861f756-d977-4a8d-96b7-e910148506f7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${check} +1",
+      "targets": [],
+      "value": "check"
+    }, {
+      "id": "76689bb1-a45e-4bb7-bee1-cf5ad3c5f495",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${check} < 3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7c19c77-986e-4671-b46d-735b4985c499",
+      "comment": "",
+      "command": "assert",
+      "target": "check",
+      "targets": [],
+      "value": "3"
+    }]
+  }, {
+    "id": "e2b645e0-2f15-4603-b340-31cc7a35b8fb",
+    "name": "times",
+    "commands": [{
+      "id": "4a5eaffc-9b13-4bde-8697-70eaec4cceca",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "check"
+    }, {
+      "id": "ecaa2f7b-6312-4ed4-a87d-5a4c801eb03b",
+      "comment": "",
+      "command": "times",
+      "target": "2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "56d677d2-e25d-48b6-b6e7-36f221a28a0c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${check} +1",
+      "targets": [],
+      "value": "check"
+    }, {
+      "id": "80d71b07-0587-4d0f-a1b9-0d64b3985e1d",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f703f1d0-6d1b-4601-b69e-ce8454e8c0bf",
+      "comment": "",
+      "command": "assert",
+      "target": "check",
+      "targets": [],
+      "value": "3"
+    }]
+  }, {
+    "id": "92f4a5ee-1a75-4607-a5e9-dd9ce050c45b",
+    "name": "while",
+    "commands": [{
+      "id": "1dd78d35-4f0d-4fa8-a2fe-87e6622683cf",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "check"
+    }, {
+      "id": "268c243e-1263-4b67-aec8-0f2c57eb734b",
+      "comment": "",
+      "command": "while",
+      "target": "${check} < 3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a847c43-03a6-49e8-9f99-fee50973191b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${check} +1",
+      "targets": [],
+      "value": "check"
+    }, {
+      "id": "717f5ee0-87ab-4dd5-a138-5f702ec6d8bc",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce9b168b-2b39-45a0-b5c3-5dd46e88e44a",
+      "comment": "",
+      "command": "assert",
+      "target": "check",
+      "targets": [],
+      "value": "3"
+    }]
+  }, {
+    "id": "91529306-d522-4a22-bf7f-d4f3ae23a067",
+    "name": "Entry Ad test",
+    "commands": [{
+      "id": "add8632e-0adc-4cfd-b84f-2fb4a8fc6c53",
+      "comment": "",
+      "command": "open",
+      "target": "/entry_ad",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d79e3698-b723-4827-ac26-99e378104d56",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15444486-183a-4840-a2d6-33b17db0f2cb",
+      "comment": "",
+      "command": "if",
+      "target": "document.querySelector('#modal') && document.querySelector('#modal').offsetHeight != 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "11792ee5-e236-4d3c-8431-c1d3947b44be",
+      "comment": "",
+      "command": "click",
+      "target": "css=.modal-footer > p",
+      "targets": [
+        ["css=.modal-footer > p", "css:finder"],
+        ["xpath=//div[@id='modal']/div[2]/div[3]/p", "xpath:idRelative"],
+        ["xpath=//div[3]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Close')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "23afdb8e-63a1-40a1-92fe-cfbc338ce5b9",
+      "comment": "",
+      "command": "waitForElementNotVisible",
+      "target": "css=.modal",
+      "targets": [],
+      "value": "1000"
+    }, {
+      "id": "52f8d076-0189-49d3-ab06-594ea6aa8978",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "88aec329-d37a-43f6-802d-2fe367fa9130",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Elemental Selenium",
+      "targets": [
+        ["linkText=Elemental Selenium", "linkText"],
+        ["css=div:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Elemental Selenium')]", "xpath:link"],
+        ["xpath=//div[@id='page-footer']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://elementalselenium.com/']", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Elemental Selenium')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win3796",
+      "windowTimeout": 2000
+    }, {
+      "id": "5f232dad-8f78-40ef-bba5-20ec79719bf3",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win3796}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "addb8b5c-2abe-41f8-a8a9-97ac7bbe5142",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Elemental Selenium: Receive a Free, Weekly Tip on Using Selenium like a Pro",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0dc5b91e-76ac-4a0d-a003-140e5c96badf",
+    "name": "add/remove elements",
+    "commands": [{
+      "id": "5a77b4e2-9490-469d-ba8a-e0b0d5cdfc83",
+      "comment": "",
+      "command": "open",
+      "target": "/add_remove_elements/9",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "39bba082-d712-4f1f-88f6-7e60f5a71651",
+      "comment": "",
+      "command": "while",
+      "target": "document.querySelectorAll('#elements button').length",
+      "targets": [],
+      "value": "10"
+    }, {
+      "id": "5f2c030c-6a98-48fc-a3b7-becc3717744a",
+      "comment": "",
+      "command": "click",
+      "target": "css=#elements > button:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2637c407-ef93-4cdb-9263-74db0559b86e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97832900-829d-42c3-9513-e9b7a400a085",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=#elements > button:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "5840456d-2e14-49a8-8ed6-141d7cbb717c",
+    "name": "Conditionals",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6bc6bf01-621f-4607-bd01-3839b3672949", "91529306-d522-4a22-bf7f-d4f3ae23a067"]
+  }, {
+    "id": "acb71ed1-6048-409a-ba6d-d920b13ea907",
+    "name": "Loops",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0dc5b91e-76ac-4a0d-a003-140e5c96badf", "b6168b5c-e282-415b-aca3-e759eb23737d", "e2b645e0-2f15-4603-b340-31cc7a35b8fb", "92f4a5ee-1a75-4607-a5e9-dd9ce050c45b"]
+  }],
+  "urls": ["http://the-internet.herokuapp.com/"],
+  "plugins": []
+}

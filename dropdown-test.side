@@ -1,0 +1,90 @@
+
+  "id": "def69017-34ab-46b3-b46c-f0aeac93ed24",
+  "version": "2.0",
+  "name": "test-test",
+  "url": "https://the-internet.herokuapp.com",
+  "tests": [{
+    "id": "0f0797ff-099e-4a00-966b-b4a478b60cbc",
+    "name": "Untitled",
+    "commands": [{
+      "id": "8c13a098-00c4-439e-a065-fd2cb7b6a0c6",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b1602d0b-7656-4257-aa32-332a6f416e48",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1398x875",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c68d5d13-3e0e-4094-8a2e-e469730888ba",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Dropdown",
+      "targets": [
+        ["linkText=Dropdown", "linkText"],
+        ["css=li:nth-child(11) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Dropdown')]", "xpath:link"],
+        ["xpath=//div[@id='content']/ul/li[11]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/dropdown')]", "xpath:href"],
+        ["xpath=//li[11]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Dropdown')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "709c3418-c515-4259-841a-30e90092601f",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdown",
+      "targets": [
+        ["id=dropdown", "id"],
+        ["css=#dropdown", "css:finder"],
+        ["xpath=//select[@id='dropdown']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "61fecf27-9c32-438b-b3f1-41b769a8184b",
+      "comment": "",
+      "command": "select",
+      "target": "id=dropdown",
+      "targets": [],
+      "value": "label=Option 1"
+    }, {
+      "id": "0c11339b-b21d-43ee-a537-f13b832c0db9",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdown",
+      "targets": [
+        ["id=dropdown", "id"],
+        ["css=#dropdown", "css:finder"],
+        ["xpath=//select[@id='dropdown']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8dd6f02c-c32d-4c9d-ac80-13f6046fa15e",
+      "comment": "",
+      "command": "select",
+      "target": "id=dropdown",
+      "targets": [],
+      "value": "label=Option 2"
+    }]
+  }],
+  "suites": [{
+    "id": "89d03812-97a6-4675-8e4c-680dfdb206fc",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0f0797ff-099e-4a00-966b-b4a478b60cbc"]
+  }],
+  "urls": ["https://the-internet.herokuapp.com/"],
+  "plugins": []
+}
